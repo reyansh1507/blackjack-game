@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack</title>
+    <link rel="stylesheet" href="blackjack2.css">
+</head>
+<body>
+
+  <!-- DEALER ZONE (top) -->
+  <section class="zone dealer-zone">
+    <h2 class="zone-label">Dealer</h2>
+    <div id="dealer-cards" class="cards"></div>
+    <p id="dealer-score" class="score-text">Score: 0</p>
+    <p id="dealer-bj"   class="status-msg gold">DEALER BLACKJACK!</p>
+    <p id="dealer-bust" class="status-msg red">DEALER BUSTED!</p>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="table-divider">
+    <span class="divider-label">♠ BLACKJACK ♠</span>
+  </div>
+
+  <!-- PLAYER ZONE (bottom) -->
+  <section class="zone player-zone">
+    <h2 class="zone-label">Player</h2>
+    <div id="player-cards" class="cards"></div>
+    <p id="player-score" class="score-text">Score: 0</p>
+    <p id="bj"       class="status-msg gold">BLACKJACK!</p>
+    <p id="gameover" class="status-msg red">BUST!</p>
+    <p id="stand"    class="status-msg grey">Stand 🔒</p>
+    <p class="hidebutton">Hit or Stand?</p>
+  </section>
+
+  <!-- RESULT BANNER -->
+  <div id="result-banner" class="result-banner">
+    <h3 id="player-win" class="result gold">YOU WON! 🏆</h3>
+    <h3 id="dealer-win" class="result red">DEALER WON!</h3>
+    <h3 id="draw"       class="result grey">IT'S A DRAW!</h3>
+  </div>
+
+  <!-- ACTION BUTTONS (fixed bottom bar) -->
+  <div id="buttons" class="action-bar">
+    <button onclick="hit()"   class="hidebutton action-btn hit-btn"   id="hit-btn">HIT</button>
+    <button onclick="stand()" class="hidebutton action-btn stand-btn" id="stand-btn">STAND</button>
+  </div>
+
+  <script src="blackjack.js"></script>
+</body>
+</html>
