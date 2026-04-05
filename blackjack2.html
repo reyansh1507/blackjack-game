@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack</title>
+    <link rel="stylesheet" href="blackjack2.css">
+    <style>
+        .container::after { content:''; display:table; clear:both; }
+    </style>
+</head>
+<body>
+    <div class="header-row">
+        <h2 class="heading1" id="heading">Player</h2>
+        <h2 class="heading2" id="heading">Dealer</h2>
+    </div>
+    <div class="container">
+        <div class="player">
+            <h3>Cards:</h3>
+            <div id="player-cards" class="cards"></div>
+            <p id="player-score">Score: 0</p>
+            <p id="bj">BLACKJACK!!!</p> <p id="gameover">GAME OVER</p>
+            <p class="hidebutton">Do u want to hit or stand?</p>
+            <div id="buttons">
+                <button onclick="hit()" class="hidebutton" id="hit-btn">Hit</button>
+                <button onclick="stand()" class="hidebutton" id="stand-btn">Stand</button>
+            </div>
+            <p id="stand">Stand🔒</p>
+        </div>
+        <div class="dealer">
+            <h3>Cards:</h3>
+            <div id="dealer-cards" class="cards"></div>
+            <p id="dealer-score">Score: 0</p>
+            <p id="dealer-bj">DEALER HAS BLACKJACK!!!</p>
+            <p id="dealer-bust">DEALER BUSTED!!!</p>
+        </div>
+    </div>
+    <h3 id="player-win" class="result">PLAYER WON!!!!</h3>
+    <h3 id="dealer-win" class="result">DEALER WON!!!!</h3>
+    <h3 id="draw" class="result">IT'S A DRAW!!!!</h3>
+    <script src="blackjack.js"></script>
+</body>
+</html>
